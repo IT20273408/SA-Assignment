@@ -1,0 +1,5 @@
+package metersconverter;
+
+public interface MetersConverter {
+
+}

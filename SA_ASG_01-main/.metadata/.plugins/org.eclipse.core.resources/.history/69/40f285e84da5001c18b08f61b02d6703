@@ -1,0 +1,5 @@
+package inchesconverter;
+
+public interface InchesConverter {
+
+}

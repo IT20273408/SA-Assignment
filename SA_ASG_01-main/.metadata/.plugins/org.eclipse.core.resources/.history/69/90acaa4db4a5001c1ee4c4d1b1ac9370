@@ -1,0 +1,29 @@
+package centimeterpublisher;
+
+public class CentimeterCalculator implements CentimeterConverter {
+
+	@Override
+	public float CnetiToMeter(float val) {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public float CnetiToInch(float val) {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public float CnetiToFeet(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float CnetiToMiles(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

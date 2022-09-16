@@ -1,0 +1,29 @@
+package metersconverter;
+
+public class MetersCalculator implements MetersConverter {
+
+	@Override
+	public float MetersToCenti(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float MetersToInch(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float MetersToFeet(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float MetersToMiles(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

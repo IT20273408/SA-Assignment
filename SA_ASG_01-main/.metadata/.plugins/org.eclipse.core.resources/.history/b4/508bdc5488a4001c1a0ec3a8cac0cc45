@@ -1,0 +1,29 @@
+package poundpublisher;
+
+public class PoundCalculator implements PoundConverter {
+
+	@Override
+	public float PoundToKilograms(float val) {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
+	@Override
+	public float PoundToStones(float val) {
+		// TODO Auto-generated method stub
+		return 2;
+	}
+
+	@Override
+	public float PoundToGrams(float val) {
+		// TODO Auto-generated method stub
+		return 3;
+	}
+
+	@Override
+	public float PoundToOunce(float val) {
+		// TODO Auto-generated method stub
+		return 4;
+	}
+
+}

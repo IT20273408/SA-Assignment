@@ -1,0 +1,26 @@
+package feetsubscriber;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class FeetDisplay extends JFrame{
+	
+	private JPanel panel;
+	private JLabel label;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+
+}

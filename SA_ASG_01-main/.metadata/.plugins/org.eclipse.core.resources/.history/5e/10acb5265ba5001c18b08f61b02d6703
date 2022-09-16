@@ -1,0 +1,56 @@
+package feetsubscriber;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import centimeterpublisher.CentimeterCalculator;
+
+public class FeetDisplay extends JFrame{
+	
+	private JPanel panel;
+	private JLabel label;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				FeetDisplay display = new FeetDisplay();
+				display.setVisible(true);
+			}
+		});
+	}
+
+	public FeetDisplay() throws HeadlessException {
+		converter = new CentimeterCalculator();
+		setResizable(false);
+		setTitle("Length Converter");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setBounds(180, 150, 650, 500);
+		
+		panel = new JPanel();
+		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(panel);
+		panel.setLayout(null);
+		panel.setVisible(true);
+		
+		label = new JLabel("Centimeter Converter");
+		label.setFont(new Font("Algerian", Font.BOLD, 30));
+		label.setBounds(140, 25, 400, 50);
+		label.setForeground(Color.blue);
+		panel.add(label);
+	}
+	
+	
+
+}

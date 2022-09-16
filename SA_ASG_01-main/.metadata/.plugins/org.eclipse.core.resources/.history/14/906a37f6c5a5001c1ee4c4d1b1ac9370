@@ -1,0 +1,147 @@
+package gramssubscriber;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import gramspublisher.GramsCalculator;
+import gramspublisher.GramsConverter;
+
+@SuppressWarnings("serial")
+public class GramsDisplay extends JFrame{
+	
+	private GramsConverter converter;
+	
+	private JPanel panel;
+	private JLabel lable, inL, outL, type;
+	
+	@SuppressWarnings("rawtypes")
+	private JComboBox box;
+	private JTextField in, out;
+	private JButton convertBtn;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					GramsDisplay display = new GramsDisplay();
+					display.setVisible(true);
+				} catch (HeadlessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public GramsDisplay() throws HeadlessException {
+		converter =  new GramsCalculator();
+		setResizable(false);
+		setTitle("Weight Converter");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setBounds(180, 150, 650, 500);
+		
+		panel = new JPanel();
+		panel.setBorder(new EmptyBorder(5,5,5,5));
+		setContentPane(panel);
+		panel.setLayout(null);
+		panel.setVisible(true);
+		
+		lable = new JLabel("Grams Converter");
+		lable.setFont(new Font("Algerian", Font.BOLD, 30));
+		lable.setBounds(140, 25, 400, 50);
+		lable.setForeground(Color.blue);
+		panel.add(lable);
+		
+		box = new JComboBox();
+		box.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		box.setBounds(220, 100, 180, 30);
+		box.setBackground(Color.WHITE);
+		
+		box.addItem("Grams to Pounds");
+		box.addItem("Grams to Stones");
+		box.addItem("Grams to Kilograms");
+		box.addItem("Grams to Ounce");
+		
+		panel.add(box);
+		
+		in = new JTextField();
+		in.setHorizontalAlignment(SwingConstants.CENTER);
+		in.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		in.setBounds(250, 160, 100, 30);
+		panel.add(in);
+		
+		convertBtn = new JButton("Convert ");
+		convertBtn.setFont(new Font("Arial Nova", Font.PLAIN, 20));
+		convertBtn.setBounds(230, 220, 150, 30);
+		convertBtn.setBackground(Color.lightGray);
+		panel.add(convertBtn);
+		
+		out = new JTextField();
+		out.setHorizontalAlignment(SwingConstants.CENTER);
+		out.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		out.setBounds(250, 280, 100, 30);
+		out.setEditable(isDisplayable());
+		panel.add(out);
+		
+		inL = new JLabel("Enter your value :");
+		inL.setFont(new Font("Algerian", Font.BOLD, 30));
+		inL.setBounds(10, 25, 400, 50);
+		inL.setForeground(Color.blue);
+		panel.add(inL);
+		
+		convertBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String input = in.getText();
+				String unit = String.valueOf(box.getSelectedItem());
+				float val = Float.parseFloat(input);
+				String output = "";
+				
+				if (input.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Input Field is Empty", "Empty Field Alert", JOptionPane.OK_OPTION);
+					
+				} else {
+					if (unit.equalsIgnoreCase("Grams to Pounds")) {
+						output = String.valueOf(converter.GramsToPounds(val));
+						
+					}else if(unit.equalsIgnoreCase("Grams to Stones")){
+						output = String.valueOf(converter.GramsToStones(val));
+						
+					}else if(unit.equalsIgnoreCase("Grams to Kilograms")){
+						output = String.valueOf(converter.GramsToKilograms(val));
+						
+					}else {
+						output = String.valueOf(converter.GramsToOunce(val));
+					}
+				}
+				
+				out.setText(output);
+			}
+		});
+	}
+	
+	
+
+}

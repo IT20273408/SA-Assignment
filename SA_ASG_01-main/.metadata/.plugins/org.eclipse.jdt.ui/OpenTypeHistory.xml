@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=PoundPublisher/src&lt;poundpublisher{PoundConverter.java[PoundConverter" modifiers="513" timestamp="1647359460502"/>
+    <typeInfo handle="=StonesPublisher/src&lt;stonespublisher{StonesConverter.java[StonesConverter" modifiers="513" timestamp="1647360485411"/>
+    <typeInfo handle="=KilosPublisher/src&lt;kilospublisher{KilogramsConverter.java[KilogramsConverter" modifiers="513" timestamp="1647360970877"/>
+    <typeInfo handle="=GramsPublisher/src&lt;gramspublisher{GramsConverter.java[GramsConverter" modifiers="513" timestamp="1647363707920"/>
+    <typeInfo handle="=LengthConverter/src&lt;lengthconverter{LengthConverter.java[LengthConverter" modifiers="513" timestamp="1647378676482"/>
+    <typeInfo handle="=CentimeterPublisher/src&lt;centimeterpublisher{CentimeterConverter.java[CentimeterConverter" modifiers="513" timestamp="1647443264672"/>
+    <typeInfo handle="=MetersPublisher/src&lt;metersconverter{MetersConverter.java[MetersConverter" modifiers="513" timestamp="1647448224726"/>
+    <typeInfo handle="=FeetPublisher/src&lt;feetpublisher{FeetConverter.java[FeetConverter" modifiers="513" timestamp="1647456663197"/>
+    <typeInfo handle="=MilesPublisher/src&lt;milespublisher{MilesConverter.java[MilesConverter" modifiers="513" timestamp="1647458171825"/>
+</typeInfoHistroy>

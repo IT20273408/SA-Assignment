@@ -1,0 +1,107 @@
+package meterssubscriber;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.HeadlessException;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import metersconverter.MetersCalculator;
+import metersconverter.MetersConverter;
+
+@SuppressWarnings("serial")
+public class MeterConvertDisplay extends JFrame{
+	
+	@SuppressWarnings("unused")
+	private MetersConverter converter;
+	
+	private JPanel panel;
+	private JLabel label;
+	
+	@SuppressWarnings("rawtypes")
+	private JComboBox box;
+	private JTextField in, out;
+	private JButton convertBtn;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					MeterConvertDisplay convertDisplay = new MeterConvertDisplay();
+					convertDisplay.setVisible(true);
+				} catch (HeadlessException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public MeterConvertDisplay() throws HeadlessException {
+		
+		converter = new MetersCalculator();
+		setResizable(false);
+		setTitle("Length Converter");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setBounds(180, 150, 650, 500);
+		
+		panel = new JPanel();
+		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(panel);
+		panel.setLayout(null);
+		panel.setVisible(true);
+		
+		label = new JLabel("Meters Converter");
+		label.setFont(new Font("Algerian", Font.BOLD, 30));
+		label.setBounds(140, 25, 400, 50);
+		label.setForeground(Color.blue);
+		panel.add(label);
+		
+		box = new JComboBox();
+		box.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		box.setBackground(Color.WHITE);
+		box.setBounds(220, 100, 180, 30);
+		
+		box.addItem("Meters to Centimeters");
+		box.addItem("Meters to Inches");
+		box.addItem("Meters to Feet");
+		box.addItem("Meters to Miles");
+		
+		panel.add(box);
+		
+		in = new JTextField();
+		in.setHorizontalAlignment(SwingConstants.CENTER);
+		in.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		in.setBounds(250, 160, 100, 30);
+		panel.add(in);
+		
+		convertBtn = new JButton("Convert ");
+		convertBtn.setFont(new Font("Arial Nova", Font.PLAIN, 20));
+		convertBtn.setBounds(230, 220, 150, 30);
+		convertBtn.setBackground(Color.lightGray);
+		panel.add(convertBtn);
+		
+		out = new JTextField();
+		out.setHorizontalAlignment(SwingConstants.CENTER);
+		out.setFont(new Font("Arial Nova", Font.PLAIN, 15));
+		out.setBounds(250, 280, 100, 30);
+		out.setEditable(isDisplayable());
+		out.setBackground(Color.white);
+		panel.add(out);
+	}
+
+	
+}

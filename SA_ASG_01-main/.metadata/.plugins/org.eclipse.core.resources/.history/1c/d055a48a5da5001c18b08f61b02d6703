@@ -1,0 +1,5 @@
+package milespublisher;
+
+public interface MilesConverter {
+
+}

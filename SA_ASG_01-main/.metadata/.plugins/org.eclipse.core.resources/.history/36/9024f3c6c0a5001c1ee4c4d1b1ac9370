@@ -1,0 +1,30 @@
+package milespublisher;
+
+public class MilesCalculator implements MilesConverter {
+
+	@Override
+	public float MilesToCenti(float val) {
+		// TODO Auto-generated method stub
+		
+		return 0;
+	}
+
+	@Override
+	public float MilesToInch(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float MilesToFeet(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float MilesToMeter(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

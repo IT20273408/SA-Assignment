@@ -1,0 +1,13 @@
+package inchesconverter;
+
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+
+public class PublisherActivator implements BundleActivator {
+
+	@SuppressWarnings("rawtypes")
+	ServiceRegistration registration;
+	
+	
+}

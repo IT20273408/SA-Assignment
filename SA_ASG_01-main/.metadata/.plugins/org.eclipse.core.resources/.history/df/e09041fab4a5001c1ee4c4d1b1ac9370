@@ -1,0 +1,29 @@
+package feetpublisher;
+
+public class FeetCalculator implements FeetConverter {
+
+	@Override
+	public float FeetToCenti(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float FeetToInch(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float FeetToMeter(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float FeetToMiles(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,29 @@
+package ouncepublisher;
+
+public class OunceCalculator implements OunceConverter {
+
+	@Override
+	public float OunceToPound(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float OunceToKilograms(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float OunceToGrams(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float OunceToStones(float val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

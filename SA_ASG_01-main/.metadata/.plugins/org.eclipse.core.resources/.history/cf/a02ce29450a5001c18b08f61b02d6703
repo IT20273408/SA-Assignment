@@ -1,0 +1,64 @@
+package lengthconverter;
+
+import centimeterpublisher.CentimeterConverter;
+import metersconverter.MetersConverter;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
+import org.osgi.util.tracker.ServiceTracker;
+
+public class Activator implements BundleActivator {
+
+	@SuppressWarnings("rawtypes")
+	ServiceRegistration registration;
+	
+	@SuppressWarnings("rawtypes")
+	private static ServiceTracker cmTracker, meterTracker, inchTracker;
+	
+	private static CentimeterConverter centimeterConverter;
+	private static MetersConverter meterConverter;
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public void start(BundleContext context) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Length Converter Service Started...");
+		
+		LengthConverter converter = new LengthConverterImp();
+		registration = context.registerService(LengthConverter.class.getName(), converter, null);
+		
+		cmTracker = new ServiceTracker(context, CentimeterConverter.class.getName(), null);
+		//meterTracker = new ServiceTracker(context, MetersConverter.class.getName(), null);
+	}
+	
+	@Override
+	public void stop(BundleContext context) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Length Converter Service Stopped...");
+		registration.unregister();
+	}
+	
+	public static boolean cmClicker() {
+		cmTracker.open();
+		centimeterConverter = (CentimeterConverter) cmTracker.getService();
+		
+		if (centimeterConverter != null) {
+			return true;
+			
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean meterClicker() {
+		//meterTracker.open();
+		//meterConverter = (MetersConverter) meterTracker.getService();
+		
+		if (meterConverter != null) {
+			return true;
+			
+		} else {
+			return false;
+		}
+	}
+}

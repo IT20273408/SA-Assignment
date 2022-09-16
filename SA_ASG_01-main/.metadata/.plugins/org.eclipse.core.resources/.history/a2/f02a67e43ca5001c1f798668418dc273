@@ -1,0 +1,40 @@
+package centimetersubscriber;
+
+import java.awt.EventQueue;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class CentimeterConvertDisplay extends JFrame{
+	
+	private JPanel panel;
+	private JLabel label;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EventQueue.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				CentimeterConvertDisplay convertDisplay = new CentimeterConvertDisplay();
+				convertDisplay.setVisible(true);
+			}
+		});
+	}
+
+	public CentimeterConvertDisplay() throws HeadlessException {
+		
+		setResizable(false);
+		setTitle("Length Converter");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setLocation(null);
+		setBounds(180, 150, 650, 500);
+	}
+	
+	
+
+}

@@ -1,0 +1,32 @@
+package inchesconverter;
+
+public class InchesCalculator implements InchesConverter {
+
+	float ans;
+	
+	@Override
+	public float InchToMeter(float val) {
+		// TODO Auto-generated method stub
+		
+		return ans;
+	}
+
+	@Override
+	public float InchToCenti(float val) {
+		// TODO Auto-generated method stub
+		return ans;
+	}
+
+	@Override
+	public float InchToFeet(float val) {
+		// TODO Auto-generated method stub
+		return ans;
+	}
+
+	@Override
+	public float InchToMiles(float val) {
+		// TODO Auto-generated method stub
+		return ans;
+	}
+
+}

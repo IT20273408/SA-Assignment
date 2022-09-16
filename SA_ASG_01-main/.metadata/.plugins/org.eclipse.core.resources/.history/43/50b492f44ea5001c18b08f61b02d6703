@@ -1,0 +1,13 @@
+package inchessubscriber;
+
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class InchesDisplay extends JFrame{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

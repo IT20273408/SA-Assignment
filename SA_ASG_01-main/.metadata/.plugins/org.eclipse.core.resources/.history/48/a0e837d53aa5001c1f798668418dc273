@@ -1,0 +1,5 @@
+package centimeterpublisher;
+
+public interface CentimeterConverter {
+
+}
